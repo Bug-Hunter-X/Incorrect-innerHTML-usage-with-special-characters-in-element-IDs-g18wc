@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv">
+    <p>This paragraph is inside a div.</p>
+  </div>
+  <script>
+    // Incorrect way to access an element with special characters in its ID
+    document.getElementById('myDiv').innerHTML = "<p>This will cause issues if myDiv ID has special characters.</p>";
+  </script>
+</body>
+</html>
